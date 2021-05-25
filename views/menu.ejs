@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/header.ejs') %>
+
+    <div class="container">
+      <h1 class="section-title">Coffee</h1>
+      <!-- Coffee List -->
+      <div class="coffee-list">
+        <% for(let i = 0; i< coffees.length; i++) { %>
+        <div class="menu-card">
+          <img src="images/coffee-<%= coffees[i].size.toLowerCase() %>.svg" alt="" />
+          <h1><%= coffees[i].name %></h1>
+          <div class="size-badge"><%= coffees[i].size %></div>
+          <h2><%= coffees[i].price %> SAR</h2>
+        </div>
+        <% } %>
+    </div>
+    <!-- End of Coffee List -->
+
+      
+      <h1 class="section-title">Bakery</h1>
+      <div class="bakery-list">
+        <% for(let i = 0; i< bakeries.length; i++) { %>
+        <div class="menu-card">
+          <img src="<%= bakeries[i].imageURL %>" alt="" />
+          <h1><%= bakeries[i].name %></h1>
+          <h2><%= bakeries[i].price %> SAR</h2>
+        </div>
+        <% } %>
+    </div>
+    <!-- End of Coffee List -->
+
+    </div>
+  </body>
+</html>

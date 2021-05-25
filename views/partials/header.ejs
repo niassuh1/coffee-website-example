@@ -1,0 +1,21 @@
+<header>
+  <a href="/" class="brand">
+    <img src="images/logo.svg" alt="" id="logo" />
+    <span>BlockCoffee</span>
+  </a>
+
+  <div class="divider"></div>
+
+  <ul class="menu">
+    <li>
+      <a href="/" <% if(page == 'home') { %> class="active" <% } %>>Home</a>
+
+    </li>
+    <li>
+      <a href="/menu" <% if(page == 'menu') { %> class="active" <% } %> >Menu</a>
+    </li>
+    <li>
+      <a href="#" <% if(page == 'offers') { %> class="active" <% } %> >Offers</a>
+    </li>
+  </ul>
+</header>
