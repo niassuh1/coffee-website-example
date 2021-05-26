@@ -20,6 +20,10 @@ mongoose
 app.use(express.static("./public"));
 app.set("view engine", "ejs");
 
+app.get('*', (req, res) => {
+  res.redirect('https://'+ req.headers.host + req.url);
+})
+
 app.get("/", (req, res) => {
   res.render("index", { page: "home" });
 });
